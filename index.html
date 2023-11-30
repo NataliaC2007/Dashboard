@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Grafana</title>
+</head>
+<body>
+    <iframe src="https://snapshots.raintank.io/goto/za_PPJNIg?orgId=2" width="100%" height="600" frameborder="0"></iframe>
+
+    <script>
+        if ('Notification' in window) {
+            Notification.requestPermission().then(function (permission) {
+                if (permission === 'granted') {
+                    setTimeout(enviarNotificacao, 5000);
+                }
+            });
+        }
+
+        function enviarNotificacao() {
+            if (Notification.permission === 'granted') {
+                var notificacao = new Notification('FOIII!!!!', {
+                    body: 'A notificação apareceu após 5 segundos!',
+                });
+
+                notificacao.onclick = function () {
+                    window.open('https://dashboard-569u.onrender.com/', '_blank');
+                };
+            }
+        }
+    </script>
+</body>
+</html>
